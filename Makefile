@@ -13,6 +13,9 @@ WEBROOT := $$HOME/www
 SLEEP   ?= 0
 SANDBOX := sandbox
 STABLE  ?= nil
+ifdef STABLE
+PKGDIR := packages-stable
+endif
 
 LISP_CONFIG ?= '(progn\
   (setq package-build-working-dir "$(TOP)/$(WORKDIR)/")\
