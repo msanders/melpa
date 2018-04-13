@@ -13,9 +13,9 @@ STABLE_STATUS_JSON=${MELPA_REPO}/html-stable/build-status.json
 STABLE_LAST_DURATION_FILE=${MELPA_REPO}/html-stable/.last-build-duration
 
 ## update MELPA repo
-#git fetch origin
-#git reset --hard "origin/${MELPA_BRANCH}"
-#git pull origin "${MELPA_BRANCH}"
+git fetch origin
+git reset --hard "origin/${MELPA_BRANCH}"
+git pull origin "${MELPA_BRANCH}"
 echo
 
 update_json() {
@@ -42,7 +42,7 @@ flux_capacitor() {
     update_json
 
     # Build all the packages.
-    #scripts/parallel_build_all
+    scripts/parallel_build_all
     make recipes/evil
 
     # Store completed date
