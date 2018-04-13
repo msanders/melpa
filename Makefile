@@ -13,7 +13,7 @@ WEBROOT := $$HOME/www
 SLEEP   ?= 0
 SANDBOX := sandbox
 STABLE  ?= nil
-ifdef STABLE
+ifneq ($(STABLE), nil)
 PKGDIR := packages-stable
 endif
 
